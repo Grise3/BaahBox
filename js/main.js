@@ -41,16 +41,21 @@ const docSections = document.querySelectorAll('.doc-section');
 // Mise en surbrillance du menu de navigation de la documentation
 function highlightNav() {
   if (!docNav || !docSections.length) return;
-  
+
   let current = '';
-  
+  let lastSection = null;
+
   docSections.forEach(section => {
     const sectionTop = section.offsetTop - 100;
     if (window.scrollY >= sectionTop) {
       current = '#' + section.getAttribute('id');
+      lastSection = section;
     }
   });
-  
+  if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 2 && lastSection) {
+    current = '#' + lastSection.getAttribute('id');
+  }
+
   docNav.querySelectorAll('a').forEach(link => {
     link.classList.remove('active');
     if (link.getAttribute('href') === current) {
