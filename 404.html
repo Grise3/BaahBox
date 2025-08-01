@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="404 Error - Page not found on BaahBox">
     <title>404 - Page Not Found | BaahBox</title>
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <link rel="stylesheet" href="css/theme.css" />
     <meta name="theme-color" content="#000000">
     <style>
         * {
@@ -240,16 +243,6 @@
             100% { background-position: 200% 50%; }
         }
         
-        .footer {
-            position: absolute;
-            bottom: 2rem;
-            left: 0;
-            right: 0;
-            text-align: center;
-            color: #555555;
-            font-size: 0.875rem;
-        }
-        
         @media (max-width: 640px) {
             .container {
                 padding: 1.5rem;
@@ -273,9 +266,30 @@
                 min-width: 160px;
             }
         }
+
     </style>
 </head>
-<body>    
+<body>
+    <header style="position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; text-align:left; backdrop-filter: blur(10px);">
+        <nav class="navbar">
+                <div class="logo">
+          <a href="index.html">
+            <img src="assets/images/logo.webp" width="50px" height="50px" style="border-radius: 50%;" alt=""/>
+            <span>BaahBox</span>
+          </a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home page</a></li>
+          <li><a href="documentation.html">Documentation</a></li>
+          <li><a href="index.html#downloads">Downloads</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
     <div class="spotlight" aria-hidden="true"></div>
     
     <main id="main-content" class="container" tabindex="-1">
@@ -290,8 +304,9 @@
         </div>
     </main>
     
-    <footer class="footer" role="contentinfo" style="color:white">
+    <footer style="position: absolute; bottom: 2rem; left: 0; right: 0; text-align: center; color: #555555; font-size: 0.875rem; color:white" role="contentinfo">
         &copy; 2025 Orange SA. Licensed under GPL v3.
     </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>
