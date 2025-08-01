@@ -113,12 +113,16 @@ img {
 .btn-primary {
   background-color: var(--color-primary);
   color: white;
+  position: relative;
+  transition: all 0.3s ease;
+  background-color: #1a5bbf;
 }
 
 .btn-primary:hover {
-  background-color: darken(var(--color-primary), 10%);
+  background-color: #14499c;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(44, 123, 229, 0.2);
+  box-shadow: 0 4px 12px rgba(26, 91, 191, 0.3);
+  color: white;
 }
 
 .btn-secondary {
